@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Cards with Filter and Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        #filter-buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #filter-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+        }
+
+        #filter-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        #filter-buttons button:focus {
+            outline: none;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-evenly;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(25% - 30px);
+            box-sizing: border-box;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .card-image {
+            width: 100%;
+            height:300px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 1200px) {
+            .card {
+                width: calc(33.33% - 30px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 30px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: calc(100% - 30px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            #filter-buttons button {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Filter Buttons -->
+    <div id="filter-buttons">
+        <button onclick="filterCards('all')">All</button>
+        <button onclick="filterCards('Category A')">Category A</button>
+        <button onclick="filterCards('Category B')">Category B</button>
+        <button onclick="filterCards('Category C')">Category C</button>
+    </div>
+
+    <!-- Card Container -->
+    <div id="card-container" class="card-container"></div>
+
+    <script src="script.js"> </script>
+</body>
+</html>

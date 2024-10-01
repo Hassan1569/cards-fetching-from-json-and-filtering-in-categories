@@ -1,0 +1,52 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+#filter-buttons {
+    margin-bottom: 20px;
+}
+
+#filter-buttons button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; /* Centers the cards horizontally */
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px; /* Fixed width to make the cards consistent */
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding is included in width/height */
+    margin-bottom: 20px; /* Adds some space between rows */
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
